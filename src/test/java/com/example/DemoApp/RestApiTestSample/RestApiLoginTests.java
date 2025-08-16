@@ -1,7 +1,9 @@
 package com.example.DemoApp.RestApiTestSample;
 
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import org.springframework.boot.test.context.SpringBootTest;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -16,7 +18,7 @@ public class RestApiLoginTests {
     @Test
     public void testSuccessfulLogin() {
         // Implement logic to test successful login
-        RestAssured
+         RestAssured
                 .given()
                 .when()
                 .get("http://localhost:8080/api/greet")
